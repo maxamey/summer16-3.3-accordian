@@ -11,7 +11,8 @@
 
 .container {
   border: 2px solid rgb(0, 184, 199);
-  width: 35rem;
+  width: 500px;
+  height: 290px;
 }
 
 
@@ -21,12 +22,10 @@
 [x] - background color of rgb(0, 198, 214);
 [x] - light font weight
 [x] - top border to match the container border
-[] - @TODO - make section one top border of nothing
-[] - @TODO - hover hand
+[x] -  make section on top border of nothing
+[x] -  hover hand
 [x] - font size?
 [x] - no margins!!!!
-[] - padding left ~2rem
-[] - height of ~3rem
 */
 
 .heading {
@@ -34,34 +33,51 @@
   border-top: 2px solid rgb(0, 184, 199);
   color: white;
   font-family: Helvetica, sans-serif;
-  font-size: 1.5rem;
+  font-size: 1;
   font-weight: lighter;
-  height: 3.3rem;
-  line-height: 3.3rem;
+  height: 42px;
+  line-height: 42px;
   margin: 0;
   padding-left: 1.8rem;
+  user-select: none;
+}
+
+.headingTop {
+  border-top: 0;
 }
 
 /* **** HEADINGS WHILE HOVERED OR SELECTED **** */
-.heading.active, .heading:hover {
+.heading:hover {
   background-color: rgb(0, 218, 236);
+  cursor: pointer;
 }
 
 
 /* **** STYLING FOR PARAGRAPHS ****
 [x] - small font-size
-[] - padding left/right follows suit
-[] - padding top/bottom ~3rem
-[] - light font weight
+[x] - padding left/right follows suit
+[x] - padding top/bottom ~3rem
+[x] - light font weight
 [x] - font family of helvetica/sans-serif
-[] -
+[x] - no padding on the bottom
 [] -
 */
 
 .paragraph {
+  height: 0;
   font-family: Helvetica, sans-serif;
-  font-size: 1rem;
+  font-size: .8rem;
   font-weight: lighter;
+  margin: 0;
+  overflow: scroll;
+  padding: 0 1.8rem;
+  transition: height 0.6s;
+}
+
+/*make padding top/bottom go away for not active and show for active with transition*/
+
+.paragraph.active {
+  height: 160px;
   padding: 1.8rem 1.8rem 0 1.8rem;
-  display: none;
+  transition: height 0.6s;
 }
