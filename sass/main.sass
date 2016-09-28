@@ -1,0 +1,40 @@
+@import "base/vars.sass"
+*
+  box-sizing: border-box
+.container
+  border: $border
+  font-family: Helvetica, sans-serif
+  font-weight: lighter
+  height: 290px
+  overflow: hidden
+  width: 500px
+
+.heading
+  background-color: $heading-color-bg
+  border-top: $border
+  color: white
+  font-size: 1rem
+  height: 42px
+  line-height: 42px
+  margin: 0
+  padding-left: 1.8rem
+
+.headingTop
+  border-top: 0
+
+.heading:hover
+  background-color: $heading-color-bg-hover
+  cursor: pointer
+
+.paragraph
+  font-size: .8rem
+  height: 0
+  margin: 0
+  overflow: scroll
+  padding: 0 1.8rem
+  +transition(height, 0.6s)
+
+.paragraph.active
+  height: 160px
+  padding: 1.8rem 1.8rem 0 1.8rem
+  +transition(height, 0.6s)
